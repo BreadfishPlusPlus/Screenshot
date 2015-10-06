@@ -1,6 +1,6 @@
 {
   "name": "Screenshot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/webserver.js",
   "private": true,
   "repository": {
@@ -14,11 +14,43 @@
   },
   "homepage": "https://github.com/BreadfishPlusPlus/Screenshot",
   "dependencies": {
-    "debug": "^2.1.0",
-    "express": "^4.10.4",
-    "phantomjs": "^1.9.8"
+    "debug": "^2.2.0",
+    "express": "^4.13.3",
+    "phantomjs": "^1.9.18"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "4.x"
+  },
+  "devDependencies": {
+    "eslint": "^1.6.0"
+  },
+  "eslintConfig": {
+    "rules": {
+      "strict": [
+        2,
+        "global"
+      ],
+      "indent": [
+        2,
+        4
+      ],
+      "quotes": [
+        2,
+        "double"
+      ],
+      "linebreak-style": [
+        2,
+        "unix"
+      ],
+      "semi": [
+        2,
+        "always"
+      ]
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended"
   }
 }
