@@ -1,6 +1,7 @@
 "use strict";
 
 import {getEnv} from "./getEnv";
+import {version} from "../package.json";
 
 const IMAGE_QUALITY = getEnv("IMAGE_QUALITY").optional(50).number();
 const CACHE_TTL = getEnv("CACHE_TTL").optional(3600000).number();
@@ -31,6 +32,9 @@ POST WIDTH
 
 THREAD WIDTH
     ${WIDTH_THREAD}
+
+VERSION
+    ${version}
 
 SOURCE
     https://github.com/BreadfishPlusPlus/Screenshot`);
