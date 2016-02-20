@@ -1,6 +1,39 @@
+## Breadfish++ Screenshot Service
+Diese APP benötigt folgende **Umgebungsvariablen**:
+
+
+#### `WIDTH_POST`
+Breite in Pixeln für Post Screenshots.
+Standardwert ist `1024`.
+
+#### `WIDTH_THREAD`
+Breite in Pixeln für Thread Screenshots.
+Standardwert ist `1280`.
+
+#### `IMAGE_QUALITY`
+Die Bildqualität in % (`1` - `100`). Bessere Qualität = Größere Datei.
+Standardwert ist `50`.
+
+#### `CACHE_TTL`
+Die zeit in *Millisekunden* für wie lange ein Bild gecached werden soll.
+Standardwert ist `3600000`.
+
+#### `USER_AGENT`
+Der User-Agent der beim Aufrufen der Seite genutzt werden soll.
+Kein Standartwert.
+
+#### `PORT`
+Der HTTP-Port über den man die APP erreichen soll.
+Kein Standartwert.
+
+#### `DEBUG`
+Siehe [debug](https://github.com/visionmedia/debug).
+Kein Standardwert.
+
+## License
 The MIT License (MIT)
 
-Copyright (c) 2014 Martin Rump
+Copyright (c) 2016 Martin Rump
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

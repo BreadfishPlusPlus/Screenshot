@@ -1,56 +1,42 @@
 {
-  "name": "Screenshot",
-  "version": "1.1.0",
-  "main": "lib/webserver.js",
+  "name": "screenshot",
+  "version": "2.0.0",
+  "description": "Breadfish++ Screenshot Service",
+  "main": "build/index.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/BreadfishPlusPlus/Screenshot.git"
+    "url": "git+https://github.com/BreadfishPlusPlus/Screenshot.git"
   },
-  "author": "Martin Rump <admin@maddin.cc>",
+  "author": "Martin Rump",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BreadfishPlusPlus/Screenshot/issues"
   },
   "homepage": "https://github.com/BreadfishPlusPlus/Screenshot",
-  "dependencies": {
-    "debug": "^2.2.0",
-    "express": "^4.13.3",
-    "phantomjs": "^1.9.18"
-  },
   "engines": {
-    "node": "4.x"
+    "node": "5.6.x",
+    "npm": "3.7.x"
   },
-  "devDependencies": {
-    "eslint": "^1.6.0"
+  "scripts": {
+    "start": "node build/index.js",
+    "clean": "rm -rf build/ > /dev/null 2>&1 && rm -rf screenshots/ > /dev/null 2>&1",
+    "build": "babel src --out-dir build",
+    "postinstall": "npm run clean -s && npm run build"
   },
-  "eslintConfig": {
-    "rules": {
-      "strict": [
-        2,
-        "global"
-      ],
-      "indent": [
-        2,
-        4
-      ],
-      "quotes": [
-        2,
-        "double"
-      ],
-      "linebreak-style": [
-        2,
-        "unix"
-      ],
-      "semi": [
-        2,
-        "always"
-      ]
-    },
-    "env": {
-      "es6": true,
-      "node": true
-    },
-    "extends": "eslint:recommended"
+  "dependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-eslint": "^4.1.8",
+    "babel-plugin-transform-async-to-generator": "^6.5.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.5.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.5.2",
+    "babel-plugin-transform-es2015-parameters": "^6.5.0",
+    "bluebird": "^3.3.0",
+    "debug": "^2.1.0",
+    "eslint": "^1.10.3",
+    "express": "^4.13.4",
+    "lodash": "^4.5.0",
+    "phantomjs-prebuilt": "^2.1.4",
+    "request-ip": "^1.2.2"
   }
 }
