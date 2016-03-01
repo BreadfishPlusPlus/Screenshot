@@ -1,6 +1,6 @@
 "use strict";
 
-const debug = require("debug")("webserver");
+const debug = require("debug")("index");
 
 import {createWebserver} from "./webserver";
 import {createIndexRoute} from "./indexRoute";
