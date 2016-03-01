@@ -1,5 +1,3 @@
-"use strict";
-
 phantom.onError = function(msg) {
     stderr.writeLiner(msg);
     phantom.exit(1);

@@ -1,5 +1,3 @@
-"use strict";
-
 const debug = require("debug")("cache");
 
 import {join} from "path";
@@ -46,7 +44,7 @@ export const isCached = async (fileName) => {
         debug(`file is ${Math.round(age / 1000)} seconds old`);
 
         if (age < CACHE_TTL) {
-            debug(`still guud`);
+            debug("still guud");
             return true;
         } else {
             return false;

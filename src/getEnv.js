@@ -1,5 +1,3 @@
-"use strict";
-
 import {toString, toNumber} from "lodash";
 
 class Env {

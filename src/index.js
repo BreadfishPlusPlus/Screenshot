@@ -1,5 +1,3 @@
-"use strict";
-
 const debug = require("debug")("index");
 
 import {createWebserver} from "./webserver";

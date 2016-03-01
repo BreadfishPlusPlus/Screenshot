@@ -1,5 +1,3 @@
-"use strict";
-
 import {getEnv} from "./getEnv";
 import {version} from "../package.json";
 

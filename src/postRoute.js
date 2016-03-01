@@ -1,5 +1,3 @@
-"use strict";
-
 const debug = require("debug")("route:post");
 
 import {getEnv} from "./getEnv";
@@ -27,7 +25,7 @@ export const createPostRoute = (webserver) => {
         if (await isCached(fileName)) {
             res.sendFile(filePath, (sendFileError) => {
                 if (sendFileError) {
-                    debug(`error sending file`);
+                    debug("error sending file");
                     debug(sendFileError);
                     return res.status(500).end();
                 }
@@ -64,7 +62,7 @@ export const createPostRoute = (webserver) => {
 
             res.sendFile(filePath, (sendFileError) => {
                 if (sendFileError) {
-                    debug(`error sending file`);
+                    debug("error sending file");
                     debug(sendFileError);
                     return res.status(500).end();
                 }

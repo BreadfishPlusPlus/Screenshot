@@ -1,5 +1,3 @@
-"use strict";
-
 const debug = require("debug")("route:thread");
 
 import {getEnv} from "./getEnv";
@@ -28,7 +26,7 @@ export const createThreadRoute = (webserver) => {
         if (await isCached(fileName)) {
             res.sendFile(filePath, (sendFileError) => {
                 if (sendFileError) {
-                    debug(`error sending file`);
+                    debug("error sending file");
                     debug(sendFileError);
                     return res.status(500).end();
                 }
@@ -66,7 +64,7 @@ export const createThreadRoute = (webserver) => {
 
             res.sendFile(filePath, (sendFileError) => {
                 if (sendFileError) {
-                    debug(`error sending file`);
+                    debug("error sending file");
                     debug(sendFileError);
                     return res.status(500).end();
                 }

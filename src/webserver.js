@@ -1,5 +1,3 @@
-"use strict";
-
 const debug = require("debug")("webserver");
 const debugRoute = require("debug")("route:default");
 
