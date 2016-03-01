@@ -1,6 +1,6 @@
 {
   "name": "screenshot",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Breadfish++ Screenshot Service",
   "main": "build/index.js",
   "private": true,
