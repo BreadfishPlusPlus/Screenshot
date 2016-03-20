@@ -7,7 +7,7 @@ const WIDTH_POST = getEnv("WIDTH_POST").optional(1024).number();
 const WIDTH_THREAD = getEnv("WIDTH_THREAD").optional(1280).number();
 
 export const createIndexRoute = async (webserver) => {
-    webserver.use((req, res) => {
+    webserver.get("/", (req, res) => {
         res.status(200).type("text/plain").send(`ROUTES
     /thread/{threadId}
     /thread/{threadId}.png
@@ -36,6 +36,10 @@ VERSION
 
 SOURCE
     https://github.com/BreadfishPlusPlus/Screenshot`);
+    });
+
+    webserver.use((req, res) => {
+        res.status(404).send("400 + 4");
     });
     return;
 };
